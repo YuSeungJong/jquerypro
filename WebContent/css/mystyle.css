@@ -1,0 +1,160 @@
+@charset "UTF-8";
+body{
+	min-width: 1200px;
+	
+}
+
+.cimg {
+	width: 200px;
+	border: 0.5px solid black;
+	float: left;
+	margin-left: 5px
+}
+
+img {
+	width: 200px;
+	height: 200px;
+}
+
+audio {
+	width: 200px;
+	height: 30px;
+}
+
+vidio {
+	float: left;
+}
+
+header {
+	border: 1px solid black;
+	/* text-align: center; */
+	background: #AEB1B6;
+	padding: 10px;
+	height: 90px;
+}
+
+.alist {
+	text-decoration: none;
+	color: gray;
+}
+
+nav {
+	background-color: #eeeeee;
+	list-style-type: none;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	border-top : 1px solid black;
+	border-bottom : 1px solid black;
+	height: 80px;
+}
+
+#aa {
+	float: left;
+	text-align: center;
+}
+
+li {
+	display: inline-block;
+	font-size: 20px;
+	padding: 10px 30px;
+}
+
+ul {
+	min-width: 1200px;
+}
+
+#left {
+	background: #3C6FC1;
+	clear: both;
+	border: 1px solid black;
+	float: left;
+	height: 500px;
+	width: calc(20% - 1%);
+	margin-right: 10px;
+}
+
+#center {
+	border: 1px solid black;
+	width: calc(59% - 1%);
+	height: 500px;
+	float: left;
+}
+
+iframe {
+	width: calc(100% - 1%);
+	height: calc(100% - 1%);
+	border: none;
+}
+
+#right {
+	background: #9C9FA4;
+	border: 1px solid black;
+	float: right;
+	width: calc(20% - 1%);
+	height: 500px;
+}
+
+#mainimg {
+	width: 50px;
+	height: 50px;
+}
+
+footer {
+	background: #27282A;
+	clear: both;
+	border: 1px solid black;
+	text-align: center;
+}
+
+.lmenu {
+	padding-top: 15px;
+	height: 30px;
+	border: 0.1px solid black;
+	background: #2D6ACA;
+}
+
+.llink, #ftext {
+	text-decoration: none;
+	color: white;
+}
+
+label, input {
+	margin: 5px;
+	size: auto;
+	width: 130px;
+}
+
+.rlink {
+	color: blue;
+}
+
+table {
+	border-collapse: collapse;
+	border: 1px solid black;
+}
+
+label {
+	display: inline-block;
+	width: 120px;
+	height: 30px;
+}
+
+#reg{
+		float : left;
+		border: 1px solid black;
+	}
+	
+input[type=button]{
+	width : 150px;
+}
+
+input[type=button].lb{
+	width: 60px;
+	
+}
+
+input[type=text].regUser{
+	box-sizing: border-box;
+	width: calc(80% - 1%);
+}

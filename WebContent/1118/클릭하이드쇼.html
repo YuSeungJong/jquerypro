@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script src = "../js/jquery-3.5.1.min.js"></script>
+<style>
+	#show{
+		display : none;
+	}
+</style>
+	<script>
+		//$(document).ready(function() {
+		$(function(){
+			$("h2").on("click",function(){
+				$(this).hide();
+				
+				//남은 h2를 비교
+				if($("h2:visible").length < 1){ //보이는게 있는지 비교
+					$("#show").css("display","block");
+				}
+			})
+			
+		/* 	$("#show").on("click", function() {
+				$("h2").show();
+				//$("h2").css("display","block");
+				//$("#show").hide();
+				$(this).hide(); */
+	
+				$("#show").on("click", function() {
+				vh = document.getElementsByTagName("h2");
+				for(i = 0; i<vh.length; i++){
+					//보이기 보여주기
+					$(vh[i]).css("display","block");
+					//$(vh[i]).show();
+					//vh[i].style.display = "block";	
+				}
+				//보이기버튼 감추기
+				//this.style.display = "none";
+				$(this).hide();
+				//$(this).css("display","none");
+			})
+		
+		})
+			
+	</script>
+</head>
+<body>
+
+	<div class="box">
+		<h3>제목</h3>
+		내용<br>	
+		<div id = "result1">
+			<h2>클릭하면 사라집니다1.</h2>
+			<h2>클릭하면 사라집니다2.</h2>
+			<h2>클릭하면 사라집니다3.</h2>
+			<h2>클릭하면 사라집니다4.</h2>
+			<h2>클릭하면 사라집니다5.</h2>
+			<h2>클릭하면 사라집니다6.</h2>
+			<h2>클릭하면 사라집니다7.</h2>
+		</div>
+		
+		<input id="show" type="button" value = "보이기">
+	</div>
+	
+	
+	//스크립트는 밑에서도 사용가능하나 표준위치가 위에임
+</body>
+</html>

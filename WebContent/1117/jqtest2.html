@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style>
+</style>
+
+<script>
+	/* jQuery */$(document).ready(function(){
+		$("#btn1").on("click",function(){
+			$("#result1").html("안녕하세요??<br>jQuery입니다!!")
+							.css("color", "red").css("background", "yellow");  //메서드 체이닝
+		});
+	});
+</script>
+</head>
+<body>
+<pre>
+CDN(CDN:Content Delivery Network) 방식으로 jQuery사용
+구글이나 마이크로소프트에서 제공하는 공개 서버로부터 네트워크를 통하여 
+웹페이지를 실행할 때마다 다운로드 받을 수도 있다 : (CDN:Content Delivery Network)방식
+로컬컴퓨터에는 저장되지 않는다.
+</pre>
+	<div class="box">
+		<h3>CDN(CDN:Content Delivery Network) 방식으로 jQuery사용</h3>
+		내용<br>
+		<input id="btn1" type="button" value="확인">
+		
+		<div id = "result1"></div>
+	</div>
+</body>
+</html>

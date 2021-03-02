@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script src="../js/jquery-3.5.1.min.js"></script>
+<script src="../js/jquery.serializejson.min.js"></script>
+<style>
+</style>
+<script>
+	$(function() {
+		$("#result1 input:button").on("click",function(){
+			//console.log($("#ff").serialize());
+			//console.log($("#ff").serializeArray());
+			//console.log($("#ff").serializeJSON());
+		/* 	vname = $("#name").val();
+			vid = $("#id").val();
+			vtel = $("#tel").val();
+			
+			datas = {"name" : vname, "id" : vid , "tel" : vtel}
+			 */
+			//서버로 보내기
+			 $.ajax({
+				url : "test.jsp",
+				type : "post",
+				data : $("#ff").serializeJSON(),
+				success : function(res) { 		//data는 요청데이터, res는 응답데이터
+					code = "";
+					code += "<div> 이름: " + res.name+"<br>";
+					code += "아이디: " + res.id+"<br>";
+					code += "전화번호: " + res.tel+"</div>";
+					$("#result1").append(code);
+				},
+				error : function(xhr) {
+					alert("상태 : "+ xhr.status);
+					//status : 304(get이나 포스터에 짝이 안맞음), 404(파일이 없음), 500(json이 잘못됨), 
+					//200 : 응답은 성공 했지만 응답 데이터의 형식오류
+				},
+				dataType : "json"  // text, json, html, xml
+			}) 
+			
+		})
+	})
+</script>
+</head>
+<body>
+
+	<div class="box">
+		<h3>ajax 을 이용한 전송과 응답</h3>
+		전송후 처리결과를 새로운 페이지로 다시 로드되지 않고 현페이지의 일부분에 출력한다. <br>
+
+		<div id = "result1">
+			<form id = "ff">
+				이름 : 
+				<input type="text" name="name" id="name"><br>
+				아이디 :
+				<input type="text" name="id" id="id"><br>
+				전화번호 : 
+				<input type="text" name="tel" id="tel"><br>
+				<input type="button" value="전송">
+			</form>
+			
+		</div>
+	</div>
+</body>
+</html>

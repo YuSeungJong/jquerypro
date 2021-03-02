@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script src="../js/jquery-3.5.1.min.js"></script>
+<style>
+	img{
+		width: 100px;
+		height: 100px;
+	}
+</style>
+
+	<script>
+		$(function() {
+			count = 0;
+			$("input[value=확인]").on("click",function(){
+				count++;
+				//vp = $("<p id='p"+count+"'onclick='proc1(this)'>Hello ~~ jQuery !!</p>");
+				vp = $("<p></p>",{
+					"id" : "p" + count,
+					"text" : "Hello~~ jQuery",
+					"click" : function() {
+						//$(this).css("font-size", "+=3px");
+						$(this).css({
+							"color" : "red",
+							"font-size" : "+=5px"
+						})
+					}
+				})
+				$(vp).appendTo("#result1"); // 변수(앞에) $붙일수도 안붙힐수도 있음 애매하면 그냥 붙히자
+			})
+			
+			$("input[value=이미지추가]").on("click",function(){
+				//이미지 생성
+				//vimg = $("<img src='../images/뱅쇼.jpg' alt='뱅쇼' onclick='proc2(this)'>")
+				 vimg = $("<img>",{
+					"src" : "../images/뱅쇼.jpg",
+					"alt" : "뱅쇼",
+					"click" : function() {
+						$(this).css({
+							"border" : "2px solid red"
+						})
+					}
+				})
+				
+				//result2에 추가
+				$(vimg).appendTo("#result2");
+			})
+			
+			
+		})
+		
+		function proc2(vimg) {
+			//v.style.fontSize = '1.2em';
+			$(vimg).css("border","2px solid red");
+		}
+		
+	
+		function proc1(v) {
+			//v.style.fontSize = '1.2em';
+			$(v).css("font-size","+=3px"); // 3px씩 증가해라
+		}
+		
+		
+		
+	</script>
+</head>
+<body>
+
+	<div class="box">
+		<h3>새로운 html요소 만들기</h3>
+		$("html")<br>
+		$("html",{속성, 이벤트, text})<br>
+		확인버튼 클릭하면 result1에 새로운 p태그로 Hello jQuery문자를 생성<br>
+		생성된 문자를 클리하면 글자크기를 증가 시킨다<br>
+		vp = $("&lt;p id='p"+count+"'onclick='proc1(this)'>Hello ~~ jQuery !!&lt;/p>");<br>
+				$(vp).appendTo("#result1");<br>
+		<br>
+		function proc1(v) {<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;$(v).css("font-size","+=3px");<br>
+		}<br>
+				
+		
+		<input type="button" value="확인">
+		
+		<div id = "result1"></div>
+	</div>
+	
+	<div class="box">
+		<h3>새로운 html요소 만들기</h3>		
+		버튼 클릭하면 result2에 이미지를 추가한다.<br>
+		이미지를 클릭하면 이미지의 테두리를 설정한다.<br>
+		<input type="button" value="이미지추가">
+		
+		<div id = "result2"></div>
+	</div>
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+

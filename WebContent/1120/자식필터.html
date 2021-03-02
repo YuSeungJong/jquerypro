@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script src="../js/jquery-3.5.1.min.js"></script>
+<style>
+	table{
+		border : 3px solid black;
+	}
+	tr{
+		border : 1px solid black;
+	}
+	td{
+		width: 200px;
+		height: 30px;
+		text-align: center;
+	}
+
+</style>
+	<script>
+		$(function() {
+			$(".box1 input:button").on("click", function() {
+				$("#result1 td:first-child").css("background","grey");
+				$("#result1 td:nth-child(2)").css("background","#9B9BA0");
+				$("#result1 td:last-child").css("background","#E6E6EA");
+			})
+			
+			
+			$(".box2 input:button").on("click", function() {
+				$("#result2 td:nth-child(1)").css("background","#2302FC")
+												.css("color","#ffffff");
+				$("#result2 td:nth-child(2)").css("background","#3F3FF2")
+												.css("color","#ffffff");
+				$("#result2 td:last-child").css("background","#9797ED");
+				
+				$("#result2 tr:first-child td").css("background","black")
+										.css("color","#ffffff");
+			})
+			
+			
+		})
+	</script>
+
+</head>
+<body>
+
+	<div class="box box1">
+		<h3>자식필터</h3>
+		first-child, nth-child(2), last-child<br>
+		td:first-child : td의 부모가 되는 각각의 tr에서 첫번째 자식인 td를 선택한다.<br>
+		$("#result1 td:first-child").css("background","grey");<br>
+		$("#result1 td:nth-child(2)").css("background","#9B9BA0");<br>
+		$("#result1 td:last-child").css("background","#E6E6EA");<br>
+		<input type="button" value="확인">
+		
+		<div id = "result1">
+			<table border="1">
+				<tr>
+					<td>이름</td>
+					<td>주소</td>
+					<td>전화번호</td>
+				</tr>
+				
+				<tr>
+					<td>홍길동</td>
+					<td>대전</td>
+					<td>010-222-333</td>
+				</tr>
+				
+				<tr>
+					<td>진달래</td>
+					<td>서울</td>
+					<td>010-444-555</td>
+				</tr>
+				
+				<tr>
+					<td>개나리</td>
+					<td>부산</td>
+					<td>010-777-888</td>
+				</tr>
+				
+				<tr>
+					<td>무궁화</td>
+					<td>대구</td>
+					<td>010-555-999</td>
+				</tr>
+				
+			
+			</table>
+		</div>
+	</div>
+	
+	
+	<div class="box box2">
+		<h3>제목</h3>
+		$("#result2 td:nth-child(1)").css("background","#2302FC")
+												.css("color","#ffffff");<br>
+		$("#result2 td:nth-child(2)").css("background","#3F3FF2")
+												.css("color","#ffffff");<br>
+		$("#result2 td:last-child").css("background","#9797ED");<br>
+				
+		$("#result2 tr:first-child td").css("background","black")
+										.css("color","#ffffff");<br>
+		<input type="button" value="확인">
+		
+		<div id = "result2">
+			<table border="1">
+				<tr>
+					<td>이름</td>
+					<td>주소</td>
+					<td>전화번호</td>
+				</tr>
+				
+				<tr>
+					<td>홍길동</td>
+					<td>대전</td>
+					<td>010-222-333</td>
+				</tr>
+				
+				<tr>
+					<td>진달래</td>
+					<td>서울</td>
+					<td>010-444-555</td>
+				</tr>
+				
+				<tr>
+					<td>개나리</td>
+					<td>부산</td>
+					<td>010-777-888</td>
+				</tr>
+				
+				<tr>
+					<td>무궁화</td>
+					<td>대구</td>
+					<td>010-555-999</td>
+				</tr>
+				
+			
+			</table>
+		</div>
+	</div>
+</body>
+</html>
